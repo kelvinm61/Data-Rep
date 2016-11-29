@@ -20,8 +20,7 @@ def todo():
 
     c = conn.cursor()
 
-    # Create table
-    c.execute("INSERT into todolist(item) values(?)", [ToDo])
+    c.execute("INSERT into todolist(item) values(%s)", [ToDo])
     conn.commit()
     
     return ToDo
