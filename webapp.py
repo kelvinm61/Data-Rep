@@ -2,7 +2,7 @@
 
 
 import flask as fl
-import itertools as it
+
 
 app = fl.Flask(__name__)
 
@@ -10,10 +10,10 @@ app = fl.Flask(__name__)
 def root():
     return app.send_static_file('index.html')
 
-@app.route("/perms", methods=["GET", "POST"])
+@app.route("/ToDo", methods=["GET", "POST"])
 def perms():
-	perms = [''.join(p) for p in it.permutations(fl.request.values["userinput"])]
-	return '\n'.join(perms)
+	ToDo = (fl.request.values["userinput"])
+	return ToDo
 
 if __name__ == "__main__":
     app.run()

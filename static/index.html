@@ -40,6 +40,11 @@
 <small id="emailHelp" class="form-text text-muted">The Database will save all your tasks and will be visible in the Database Tab</small>
 		  </div>
 		  <button type="submit" id="submit" class="btn btn-primary">Add</button>
+              
+		  <div class="form-group">
+			<label for="serveroutput">Tasks</label>
+			<textarea class="form-control" id="serveroutput" rows="10" placeholder="Please input in the To Do List bar on the left."  readonly></textarea>
+		
 		</form>
 		<br />
 		
@@ -52,7 +57,7 @@
 			e.preventDefault();
 			
 			data = {userinput: $("#userinput").val()}
-			$.post("/perms", data, function(resbody){
+			$.post("/ToDo", data, function(resbody){
 				$("#serveroutput").text(resbody);
 			});
 		});
