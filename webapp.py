@@ -41,11 +41,7 @@ def store():
 
     # Create table
     c.execute("SELECT * from todolist", (fl.request.form['item'],))
-     print  ("\nTest from todolist.db")
-    l=[]
-    for a in g: l.append({'item':a['item']})
-        
-    print(l)
+   
     return str(c.fetchall())
 
 
