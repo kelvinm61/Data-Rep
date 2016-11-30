@@ -16,7 +16,7 @@ def Database():
 
     #   Save (commit) the changes
     conn.commit()
-
+    #closes the database.
     conn.close()
     
 if __name__ == "__main__":
