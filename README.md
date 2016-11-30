@@ -13,3 +13,4 @@ To run the To Do List we must go into terminal and then find the folder in docum
 ```bash
 $ python webapp.py
 ```
+Terminal will then give you back a url to be copied and pasted into a url bar, when run in the url bar the program will run on that url in the browser.
