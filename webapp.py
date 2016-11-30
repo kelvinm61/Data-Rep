@@ -32,7 +32,7 @@ def store():
     c = conn.cursor()
 
     # Create table
-    c.execute("SELECT item from todolist")
+    c.execute("SELECT * from todolist")
     return str(c.fetchall())
 
 
