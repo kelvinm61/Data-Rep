@@ -41,6 +41,7 @@ def store():
 
     # Create table
     c.execute("SELECT * from todolist", (fl.request.form['item'],))
+    
     return str(c.fetchall())
 
 
