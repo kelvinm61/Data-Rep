@@ -40,7 +40,7 @@ def store():
     c = conn.cursor()
 
     # Create table
-    c.execute("SELECT ITEM from todolist", (fl.request.form['item'],))
+    c.execute("SELECT * from todolist", (fl.request.form['item'],))
     return str(c.fetchall())
 
 
