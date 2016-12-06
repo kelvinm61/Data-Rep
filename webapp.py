@@ -14,7 +14,7 @@ app = fl.Flask(__name__)
 def get_db(): 
     db = getattr(fl.g, '_database', None)
     if db is None:
-        db = fl.g._database = sqlite3.connect('recipes.db')
+        db = fl.g._database = sqlite3.connect('todolist.db')
         return db
 
 #return answer in the html page index.
